@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="dam.alumno.filmoteca.HelloController">
+
+  <top>
+    <MenuBar>
+      <Menu text="Archivo">
+        <MenuItem text="Añadir película" onAction="#handleAddMovie"/>
+        <MenuItem text="Salir" onAction="#handleExit"/>
+      </Menu>
+      <Menu text="Editar">
+        <MenuItem text="Modificar película" onAction="#handleEditMovie"/>
+        <MenuItem text="Eliminar película" onAction="#handleDeleteMovie"/>
+      </Menu>
+    </MenuBar>
+  </top>
+
+  <center>
+    <SplitPane orientation="HORIZONTAL">
+      <TableView fx:id="tableView">
+        <columns>
+          <TableColumn fx:id="columnTitle" text="Título"/>
+          <TableColumn fx:id="columnYear" text="Año"/>
+        </columns>
+      </TableView>
+
+      <VBox spacing="10">
+        <padding>
+          <Insets top="10" right="10" bottom="10" left="10"/>
+        </padding>
+        <ImageView fx:id="posterImageView" fitWidth="200" fitHeight="300"/>
+        <Label text="Detalles de la película"/>
+        <TextArea fx:id="descriptionTextArea" wrapText="true" editable="false"/>
+        <Label fx:id="ratingLabel" text="Rating:"/>
+      </VBox>
+    </SplitPane>
+  </center>
+</BorderPane>

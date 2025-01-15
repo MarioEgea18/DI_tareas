@@ -1,0 +1,37 @@
+/* styles.css */
+
+.root {
+    -fx-font-family: 'Arial';
+    -fx-background-color: #f4f4f4;
+}
+
+.TableView {
+    -fx-border-color: #ddd;
+    -fx-border-width: 1;
+}
+
+.Label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+}
+
+.Button {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-padding: 5 15;
+    -fx-cursor: hand;
+}
+
+.Button:hover {
+    -fx-background-color: #0056b3;
+}
+
+.TextField, .TextArea {
+    -fx-border-color: #ddd;
+    -fx-border-width: 1;
+    -fx-padding: 5;
+}
+
+.Slider {
+    -fx-padding: 5;
+}
